@@ -8,13 +8,15 @@ import { NgifNgforComponent } from './ngif-ngfor/ngif-ngfor.component';
 import { AgendaComponent } from './Agenda/Agenda.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { AgendaTaskComponent } from './agenda-task/agenda-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
       NgifNgforComponent,
-      AgendaComponent
+      AgendaComponent,
+      AgendaTaskComponent
    ],
   imports: [
     BrowserModule,

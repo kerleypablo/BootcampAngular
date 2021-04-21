@@ -1,3 +1,35 @@
-<p>
-  Agenda works!
-</p>
+<mat-accordion>
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Meu Dia
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+   <app-agenda-task [tasks]="tarefas">
+
+   </app-agenda-task>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Amanha
+      </mat-panel-title>
+      <mat-panel-description>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-agenda-task [tasks]="tarefas"></app-agenda-task>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<mat-expansion-panel >
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Proximos dias
+    </mat-panel-title>
+    <mat-panel-description>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <app-agenda-task [tasks]="tarefas"></app-agenda-task>
+</mat-expansion-panel>
+

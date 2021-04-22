@@ -9,6 +9,9 @@ import { AgendaComponent } from './Agenda/Agenda.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { AgendaTaskComponent } from './agenda-task/agenda-task.component';
+import { DialogAddTaskComponent } from './dialog-add-task/dialog-add-task.component';
+import { TaskService } from './services/task.service';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { AgendaTaskComponent } from './agenda-task/agenda-task.component';
     DataBindingComponent,
       NgifNgforComponent,
       AgendaComponent,
-      AgendaTaskComponent
+      AgendaTaskComponent,
+      DialogAddTaskComponent,
+
    ],
   imports: [
     BrowserModule,
@@ -24,7 +29,9 @@ import { AgendaTaskComponent } from './agenda-task/agenda-task.component';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [
+      TaskService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,14 +1,17 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "385d349c-bae0-4345-9214-4787e23afa44"
+    "analytics": "caddb209-8ba9-4e50-9511-facfa571d87d"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cursoangular": {
+    "MyTaks": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -20,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cursoangular",
+            "outputPath": "dist/MyTaks",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -32,7 +35,7 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -69,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cursoangular:build"
+            "browserTarget": "MyTaks:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cursoangular:build:production"
+              "browserTarget": "MyTaks:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cursoangular:build"
+            "browserTarget": "MyTaks:build"
           }
         },
         "test": {
@@ -96,7 +99,7 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -118,16 +121,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cursoangular:serve"
+            "devServerTarget": "MyTaks:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cursoangular:serve:production"
+              "devServerTarget": "MyTaks:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "cursoangular"
+  "defaultProject": "MyTaks"
 }

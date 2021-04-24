@@ -1,13 +1,22 @@
-import { AgendaComponent } from './Agenda/Agenda.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { DataBindingComponent } from './data-binding/data-binding.component';
-import { NgifNgforComponent } from './ngif-ngfor/ngif-ngfor.component';
+import { Routes, RouterModule } from '@angular/router';
+import { AgendaComponent } from './agenda/agenda.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-  {path: 'primeiro-componente', component: DataBindingComponent},
-  {path: 'teste', component: NgifNgforComponent},
-  {path: 'agenda', component: AgendaComponent},
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'agenda'
+  },
+  {
+    path: 'agenda',
+    component: AgendaComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
+  }
 ];
 
 @NgModule({
@@ -15,4 +24,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
